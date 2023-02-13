@@ -7,14 +7,18 @@ router.get('/', (req, res) => {
 			city: 'Seattle',
 			state: 'WA',
 			cuisines: 'Thai, Pan-Asian',
-			pic: 'http://placekitten.com/250/250',
+			pic: '/images/H-Thai-ML.jpg',
+			photographerLink: 'https://unsplash.com/@sharp3',
+			photographer: 'Steve Sharp'
 		},
 		{
 			name: 'Coding Cat Cafe',
 			city: 'Phoenix',
 			state: 'AZ',
 			cuisines: 'Coffee, Bakery',
-			pic: 'http://placekitten.com/250/250',
+			pic: '/images/Cat_Cafe.jpg',
+			photographerLink: 'https://unsplash.com/@tamarushphotos',
+			photographer: 'Tamara Malaniy'
 		},
 	];
 
