@@ -13,12 +13,12 @@ function index (data) {
         <p className="text-center">
           {place.cuisines}
         </p>
-        <img src={place.pic} alt={place.name} />
+        <img src={place.pic} alt={place.name} width="600" height="500"/>
         <p className="text-center">
           Located in {place.city}, {place.state}
         </p>
         <p className="text-center">
-          Located in {place.photographer}, {place.url}
+          Photo by {place.photographer} on <a href={place.url}>Unsplash</a>
         </p>
       </div>
     )

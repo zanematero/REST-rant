@@ -4,14 +4,14 @@ module.exports = [{
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
     pic: '/images/H-Thai-ML.jpg',
-    photographer: 'whatever1',
-    url: 'whatever1url'
+    photographer: 'Steve Sharp',
+    url: 'https://unsplash.com/@sharp3'
 }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
     pic: '/images/Cat_Cafe.jpg',
-    photographer: 'whatever2',
-    url: 'whatever2url'
+    photographer: 'Tamara Malaniy',
+    url: 'https://unsplash.com/@tamarushphotos'
 }]
