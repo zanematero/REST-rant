@@ -47,12 +47,12 @@ const places = require('../models/places.js')
 	.then(() => {
 		res.redirect('/places')
 	})
-	places.push(req.body)
 	.catch(err => {
 		console.log('err', err)
 		res.render('error')
 	})
   })
+  
   
   router.put('/:id', (req, res) => {
 	let id = Number(req.params.id)
