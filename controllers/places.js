@@ -29,7 +29,7 @@ const places = require('../models/places.js')
 })
 
 
-  router.get('/:id/edit', (req, res) => {
+  /* router.get('/:id/edit', (req, res) => {
 	let id = Number(req.params.id)
 	if (isNaN(id)) {
 		res.render('error')
@@ -40,7 +40,18 @@ const places = require('../models/places.js')
 	else {
 	  res.render('places/edit', { place: places[id] })
 	}
-  })  
+  })   */
+
+  router.get('/:id/edit', (req, res) => {
+	db.Place.findById()
+	.then((places) => {
+		res.render('places/edit', { places })
+	})
+	  .catch(err => {
+		console.log(err)
+		res.render('error')
+	  })
+  })
 
   router.post('/', (req, res) => {
 	db.Place.create(req.body)
