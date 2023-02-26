@@ -1,4 +1,5 @@
 const React = require('react')
+const comment = require('../../models/comment')
 const Def = require('../default')
 
 function show (data) {
@@ -41,10 +42,10 @@ function show (data) {
                         <h4>
                             Serving {data.place.cuisines}
                         </h4>
-                        <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+                        <a href={`/places/${data._id}/edit`} className="btn btn-warning"> 
                             Edit
                         </a>     
-                        <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                        <form method="POST" action={`/places/${data._id}?_method=DELETE`}> 
                             <button type="submit" className="btn btn-danger">
                                 Delete
                             </button>
@@ -53,10 +54,13 @@ function show (data) {
                 </div> 
                 <hr />
                 <h2>Comments</h2>
-                <form method="POST" action={`/places/${data.id}`}>
-                    <div className="form-group">
+                <form method="POST" action={`/places/${data._id}`}>
+                    <div className="form-group row">
                         <label htmlFor="comment">Add a comment:</label>
                         <input className="form-control" id="comment" name="comment" required />
+                        <button type="submit" className="btn btn-primary">
+                                Submit
+                          </button>
                     </div>
                 </form>
                 {comments}
