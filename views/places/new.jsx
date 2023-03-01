@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default')
   
 function new_form (data) {
-    let sumRatings = data.Place.Comment.reduce((tot, c) => {
+    let sumRatings = data.place.comments.reduce((tot, c) => {
         return tot + c.stars
       }, 0)
       let averageRating = sumRatings / data.place.comments.length

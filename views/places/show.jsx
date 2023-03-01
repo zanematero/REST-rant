@@ -74,20 +74,66 @@ function show (data) {
                     </div>
                 </div> 
                 <hr />
-                <h2>Comments</h2>
-                <form method="POST" action={`/places/${data.place._id}/comment`}>
-                    <div className="form-group row">
+                  <h2>Comments</h2>
+                  <form method="POST" action={`/places/${data.place._id}/comment`}>
+                      <div className="form-group row">
                         <label htmlFor="comment">Add a comment:</label>
-                        <input className="form-control" id="comment" name="comment" required />
-                        <button type="submit" className="btn btn-primary">
-                                Submit
-                          </button>
-                    </div>
-                </form>
-                {comments}
-          </main>
-        </Def>
-    )
+                        <div className="row">
+                        <div className="form-group col-sm-5">
+							<label htmlFor="comment">Comment</label>
+							<input
+								id="comment"
+								name="comment"
+								className="form-control text-center"
+							/>
+						</div>
+						<div className="form-group col-sm-5">
+							<label htmlFor="author">Author</label>
+							<input
+								id="author"
+								name="author"
+								className="form-control text-center"
+							/>
+						</div>
+						<div className="form-group col-sm-5">
+							<label htmlFor="stars">Star Rating</label>
+							<input
+								type="range"
+								step="0.5"
+								min="1"
+								max="5"
+								id="stars"
+								name="stars"
+								className="form-range"
+							/>
+						</div>
+						<div className="form-group col-sm-2">
+							<label
+								htmlFor="rant"
+								className="form-check-label"
+								for="rant"
+							>
+								Rant?
+							</label>
+							<br />
+							<input
+								className="form-check-input"
+								type="checkbox"
+								id="rant"
+								name="rant"
+								value="yes"
+							/>
+						</div>
+					</div>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </div>
+      </form>
+      {comments}
+      </main>
+    </Def>
+  )
 }
 
 module.exports = show
