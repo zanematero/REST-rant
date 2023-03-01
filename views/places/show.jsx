@@ -82,8 +82,8 @@ function show (data) {
                         <div className="form-group col-sm-5">
 							<label htmlFor="comment">Comment</label>
 							<input
-								id="comment"
-								name="comment"
+								id="content"
+								name="content"
 								className="form-control text-center"
 							/>
 						</div>
@@ -98,14 +98,13 @@ function show (data) {
 						<div className="form-group col-sm-5">
 							<label htmlFor="stars">Star Rating</label>
 							<input
-								type="range"
-								step="0.5"
+								type="number"
 								min="1"
 								max="5"
 								id="stars"
 								name="stars"
 								className="form-range"
-							/>
+                />
 						</div>
 						<div className="form-group col-sm-2">
 							<label
